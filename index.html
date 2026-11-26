@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ai.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -24,6 +25,7 @@
         <a class="nav-link" href="#transactions"><span>↕</span> Transactions</a>
         <a class="nav-link" href="#analytics"><span>◔</span> Analytics</a>
         <a class="nav-link" href="#budget"><span>◎</span> My budget</a>
+        <a class="nav-link" href="#ai"><span>✦</span> SpendSmart AI</a>
       </nav>
       <div class="sidebar-bottom">
         <div class="tip-card">
@@ -90,6 +92,20 @@
         </div>
       </section>
 
+      <section class="panel ai-panel" id="ai">
+        <div class="panel-heading">
+          <div><div class="section-kicker">YOUR ASSISTANT</div><h2>SpendSmart AI</h2></div>
+          <span class="ai-badge">Smart Demo AI</span>
+        </div>
+        <div class="ai-chat" id="aiChat" aria-live="polite"></div>
+        <div class="ai-chips" id="aiChips"></div>
+        <form class="ai-form" id="aiForm">
+          <input type="text" id="aiInput" placeholder="Ask about your budget or spending..." autocomplete="off" aria-label="Message SpendSmart AI">
+          <button class="ai-send" type="submit">Send</button>
+        </form>
+        <p class="ai-note">Rule-based financial assistant using your own dashboard data. It runs in your browser and nothing is sent anywhere.</p>
+      </section>
+
       <section class="content-grid" id="analytics">
         <article class="panel chart-panel">
           <div class="panel-heading"><div><div class="section-kicker">WHERE IT GOES</div><h2>Spending breakdown</h2></div><span class="period-pill">This month</span></div>
@@ -136,5 +152,6 @@
   </div>
   <div class="toast" id="toast" role="status"></div>
   <script src="script.js"></script>
+  <script src="ai.js"></script>
 </body>
 </html>

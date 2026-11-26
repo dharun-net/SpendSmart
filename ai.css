@@ -1,0 +1,22 @@
+/* SpendSmart AI chat styles (kept separate so style.css is untouched) */
+.ai-panel{margin-bottom:24px}
+.ai-badge{font-size:12px;padding:6px 12px;border-radius:99px;background:#f1eefe;color:#705cf6;font-weight:600;white-space:nowrap}
+.ai-chat{height:380px;overflow-y:auto;scroll-behavior:smooth;display:flex;flex-direction:column;gap:12px;padding:16px;margin-top:16px;border-radius:16px;background:#f8f7fd;border:1px solid #eceaf8}
+.ai-msg{max-width:82%;padding:12px 15px;border-radius:16px;font-size:14.5px;line-height:1.55;word-wrap:break-word}
+.ai-msg.bot{align-self:flex-start;background:#fff;color:#1f1d3a;border:1px solid #eceaf8;border-top-left-radius:4px}
+.ai-msg.user{align-self:flex-end;background:linear-gradient(135deg,#705cf6,#8b79f6);color:#fff;border-top-right-radius:4px}
+.ai-typing{display:flex;gap:5px;padding:15px 16px}
+.ai-typing span{width:7px;height:7px;border-radius:50%;background:#8b79f6;animation:aiDot 1s infinite}
+.ai-typing span:nth-child(2){animation-delay:.15s}
+.ai-typing span:nth-child(3){animation-delay:.3s}
+@keyframes aiDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
+.ai-chips{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 6px}
+.ai-chip{flex:none;font:inherit;font-size:13px;color:#4b3fc7;background:#fff;border:1px solid #d9d4f7;padding:8px 14px;border-radius:99px;cursor:pointer}
+.ai-chip:hover,.ai-chip:focus-visible{background:#f1eefe;border-color:#705cf6;outline:none}
+.ai-form{display:flex;gap:10px;margin-top:6px}
+.ai-form input{flex:1;font:inherit;font-size:14.5px;padding:14px 16px;border-radius:14px;border:1px solid #d9d4f7;background:#fff;color:#1f1d3a;min-width:0}
+.ai-form input:focus{outline:2px solid #705cf6;border-color:transparent}
+.ai-send{font:inherit;font-weight:700;color:#fff;background:linear-gradient(135deg,#705cf6,#8b79f6);border:0;border-radius:14px;padding:0 24px;cursor:pointer}
+.ai-note{font-size:12px;color:#8a87a8;margin-top:10px}
+@media(max-width:600px){.ai-msg{max-width:92%}.ai-chat{height:340px}}
+@media(prefers-reduced-motion:reduce){.ai-chat{scroll-behavior:auto}.ai-typing span{animation:none}}
